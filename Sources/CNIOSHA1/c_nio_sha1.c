@@ -61,14 +61,7 @@
 
 /* soundness check */
 #if !defined(BYTE_ORDER) && defined(__BYTE_ORDER)
- #define BYTE_ORDER __BYTE_ORDER
- #ifndef LITTLE_ENDIAN
- #define LITTLE_ENDIAN __LITTLE_ENDIAN
- #endif /* LITTLE_ENDIAN */
- #ifndef BIG_ENDIAN
- #define BIG_ENDIAN __LITTLE_ENDIAN
- #endif /* BIG_ENDIAN */
- #endif /* BYTE_ORDER */
+# define BYTE_ORDER __BYTE_ORDER
 #elif BYTE_ORDER != BIG_ENDIAN
 # if BYTE_ORDER != LITTLE_ENDIAN
 #  define unsupported 1
